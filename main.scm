@@ -1,9 +1,5 @@
-(((lambda (f)
-    ((lambda (proc)
-       (f (lambda (arg) ((proc proc) arg))))
-     (lambda (proc)
-       (f (lambda (arg) ((proc proc) arg))))))
-  (lambda (self)
-    (lambda (ls)
-      (if (null? ls) 0 (+ 1 (self (cdr ls)))))))
- '(a b c d e))
+(define b
+  (lambda(m x b)
+    (- b (* m x)))) ; ==> y-intercept of line = y-mx
+     
+(b 2 3 10)
